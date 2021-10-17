@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.box {*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    border: 10px solid #ccc;*/
+        /*    background-color: lightblue;*/
+        /*    padding: 20px;*/
+        /*}*/
+        /*.box2 {*/
+        /*    margin: 20px;*/
+        /*}*/
+
+        /*.box3 {*/
+        /*    width: 200px;*/
+        /*    height: 200px;*/
+        /*    background-color: lightblue;*/
+        /*    padding: 30px;*/
+        /*}*/
+        /*.box-sizing {*/
+        /*    box-sizing: border-box;*/
+        /*}*/
+        /*.content-box {*/
+        /*    box-sizing: content-box;*/
+        /*}*/
+        /*hr {*/
+        /*    margin: 30px 0;*/
+        /*}*/
+
+        .box4 {
+            margin-bottom: 20px;
+        }
+        .box5 {
+            margin-top: 40px;
+        }
+
+        .outer {
+            border: 1px solid transparent;
+
+        }
+        img {
+            float: left;
+        }
+
+        .box6 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            float: left;
+            margin-right: 50px;
+        }
+        .box7 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+        span {
+            float: left;
+        }
+        p {
+            background-color: orange;
+        }
+        .clearfix {
+            clear: both;
+        }
+
+        .rl {
+            position: relative;
+            top: 50px;
+        }
+        .ab {
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            top: 20px;
+        /*    以整个窗口为定位点*/
+        }
+
+        .d1 {
+            background-color: lightpink;
+        }
+        .d2 {
+            background-color: lightblue;
+        }
+        .d3 {
+            background-color: lightgreen;
+        }
+    </style>
+
+</head>
+<body>
+<h1>Box Model + Float + Positioning</h1>
+<!--<div class="box box1"></div>-->
+<!--<div class="box box2"></div>-->
+
+<!--<div class="box3 box-sizing"></div>-->
+<!--<hr />-->
+<!--<div class="box3 content-box"></div>-->
+
+<!--<div class="box box4"></div>-->
+<!--<div class="box box5"></div>-->
+
+<!--<div class="outer">-->
+<!--    <div class="inner">-->
+
+<!--    </div>-->
+<!--</div>-->
+
+<!--<img src="https://metroid.nintendo.com/assets/images/packshot/packshot-us-medium-up.png" alt="" />-->
+<!--<span>Metroid[a] is a Japanese action-adventure game franchise created by Nintendo. The player controls bounty hunter Samus Aran, who protects the galaxy from the Space Pirates and their attempts to harness the power of the parasitic Metroid creatures. The first Metroid was developed by Nintendo R&D1 and released on the Nintendo Entertainment System in 1986. It was followed by Metroid II: Return of Samus (1991) for the handheld Game Boy and Super Metroid (1994) for the Super Nintendo Entertainment System. The first 3D Metroid game, Metroid Prime (2002), was developed by Retro Studios for the GameCube, and was followed by two sequels. Following Team Ninja's Metroid: Other M (2010), the series went on a hiatus. Developer Mercury Steam helmed the return of Metroid with Metroid: Samus Returns in 2017, while Metroid Dread is scheduled for release in October 2021.</span>-->
+
+<div class="box box6"></div>
+<span>123</span>
+<div class="box box7"></div>
+<p>123</p>
+<p class="clearfix">123</p>
+
+<div class="rl">this is about positioning, relative</div>
+<div class="ab d1"></div>
+
+<SCRIPT>
+    // what is box model
+    // box model: content + padding + margin + border
+    // box content: border box is more widely used. bc no need to calculate
+    // box margin collapse: at vertical, two box margin will choose the bigger one, ignore the smaller one
+    // float: left, right, we can use ul + float to implement horizontal navigation
+    // float clear: left, right, both
+</SCRIPT>
+</body>
+</html>

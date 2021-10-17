@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<h1>DOM, document object model</h1>
+<p>this is a paragraph</p>
+
+<div class="user common">Users:</div>
+
+<ul class="box common">
+    <li id="john">John</li>
+    <li id="peter" class="item">Peter</li>
+</ul>
+
+<ol id="ol">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+</ol>
+
+
+
+<script type="text/javascript">
+    // var a = 10;
+    // function sayhi() {
+    //     var a = 20;
+    //     console.log(a);
+    //     console.log("hi");
+    // }
+
+    // get elements
+    // var aJohn = document.getElementById("john");
+    // console.dir(aJohn);
+    //
+    // var oCommon = document.getElementsByClassName("common");
+    // console.log(oCommon);
+    //
+    // var oBox = document.getElementsByClassName("box")[0];
+    // console.log(oBox);
+    // var oItem = oBox.getElementsByClassName("item")[0];
+    // console.log(oItem);
+    //
+    // var oLis = document.getElementsByTagName("li");
+    // console.log(oLis);
+
+    // var oUser = document.querySelector(".user");
+    // console.log(oUser);
+    //
+    // var oCommon = document.querySelectorAll(".common");
+    // console.log(oCommon);
+    //
+    // var oCommon1 = document.querySelectorAll("ul li");
+    // console.log(oCommon1);
+
+    // step1: create an object
+    var oLi = document.createElement("li");
+    console.log(oLi);
+    // step2: add content
+    oLi.innerHTML = "<strong>append</strong>";
+    // oLi.innerText = "<strong>append</strong>";
+    console.log(oLi);
+    // add class name
+    oLi.className = "item";
+    // step3: hook point
+    var oOL = document.getElementById("ol");
+    // step4: append
+    // oOL.append(oLi);
+    oOL.prepend(oLi);
+    oOL.before("before");
+    oOL.after("after");
+
+
+</script>
+</body>
+</html>

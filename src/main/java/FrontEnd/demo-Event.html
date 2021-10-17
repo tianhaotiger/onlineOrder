@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+<h1 onclick="alert('haha')">Event</h1>
+<div></div>
+
+
+<script type="text/javascript">
+    var oDiv = document.getElementsByTagName("div")[0];
+    // console.log(oDiv);
+    // oDiv.onclick = function () {
+    //     console.log(1);
+    //     oDiv.style.backgroundColor = "red";
+    // }
+
+    // console.log(oDiv);
+    // oDiv.onclick = function () {
+    //     console.log(1);
+    //     oDiv.style.backgroundColor = "orange";   will overwrite
+    // }
+
+    oDiv.addEventListener("click", function (e) {
+        console.log(e.target);
+    }, false);
+
+    // oDiv.addEventListener("click", function () {
+    //     console.log(2);
+    // }, false);  // will not overwrite
+
+</script>
+
+</body>
+</html>

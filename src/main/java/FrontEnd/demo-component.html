@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+</head>
+<body>
+<h1>React JSX + Component</h1>
+<div id="app"></div>
+
+
+
+<script type="text/babel">
+    // const ele = <h3 className="box">
+    //     <p>hello react!!!</p>
+    // </h3>;
+
+    // const a = 10;
+    // const b = "hello";
+    // const bool = true;
+    // const arr = [1,2,3, [1,2,3]];
+    // const obj = {name : "Joe", age : 10};
+    // const add = (a, b) => a + b;
+    // const arr1 = ['apple', 'pear', 'berry'];
+    // const res = arr1.map((item, index) => {
+    //     return <p key={index}>* {item} *</p>
+    // });
+    //
+    //
+    //
+    // // const ele = <div>name : { obj.name }, age : {obj.age}</div>;
+    // // const ele = <div>{add(1,3)}</div>;
+    // const ele = <div>{res}</div>;  // 三元运算可以。if else不行，for，while也不行
+
+    // function Hello() {
+    //     return <div>
+    //         <p key="1">haha</p>
+    //         <p key="2">hehe</p>
+    //     </div>
+    // }
+
+    function Hello(props) {
+        console.log(props);
+        return <p>hello {props.personData.name}</p>
+    }
+
+    const person = {name : "Joe", age: 10};
+
+    class App extends React.Component{
+        constructor(props) {
+            super();
+            console.log(this.props);
+        }
+
+        render() {
+            console.log(this.props);
+            return <div>
+                <p>this is app component.</p>
+                <p>Hello App! Hello {this.props.personData.name}</p>
+            </div>
+        }
+    }
+
+    ReactDOM.render(
+        // react element
+        <App personData={person}/>,
+        // where to mount
+        document.getElementById("app")
+    )
+</script>
+
+
+<script type="text/javascript">
+    // 1. how to install react
+    // - react - core
+    // - reactdom - virtual dom - dom
+    // - babel - compile jsx
+    // const ele = React.createElement('h3', {className : 'box'}, 'hello React!')
+
+    // ReactDom.render(
+    //     // react element
+    //     ele,
+    //     // where to mount
+    //     document.getElementById("app")
+    // )
+
+</script>
+</body>
+</html>

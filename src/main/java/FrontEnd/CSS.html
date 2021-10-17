@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <style>
+        /** {*/
+        /*    color: aqua;*/
+        /*}*/
+        /*h1 {*/
+        /*    color: blue;*/
+        /*}*/
+        /*p {*/
+        /*    color: blue;*/
+        /*    font-size: 30px;*/
+        /*}*/
+        /*ul {*/
+        /*    color: blue;*/
+        /*}*/
+        li {
+            color: aqua;
+        }
+
+        #item2 {
+            color: purple;
+        }
+        /*id cannot be duplicate, class can be duplicate*/
+        /*id usually used in javaScript, as a hook*/
+        /*class always used in CSS*/
+
+        .li-item, .box {
+            font-size: 50px;
+            background-color: #ccc;
+        }
+        /*  "," is 并集选择器*/
+
+        .btn {
+            width: 200px;
+            height: 60px;
+            font-weight: bold;
+        }
+        .success {
+            background-color: green;
+        }
+        .warning {
+            background-color: orange;
+        }
+        .failed {
+            background-color: red;
+        }
+
+        /*span {*/
+        /*    color: red;*/
+        /*}*/
+        div span {
+            color: red;
+        }
+        p span {
+            color: green;
+        }
+        p > span {
+            color: blue;
+        }
+        /*  ">" is son selector, can only find son*/
+    </style>
+<!--    <link rel="stylesheet" href="mycss.css" />-->
+</head>
+
+
+
+<body>
+<h1>CSS</h1>
+
+<p class="li-item">this is a paragraph.</p>
+<p class="box">this is a paragraph.</p>
+
+<ul>
+    <li class="li-item">1</li>
+    <li id="item2">2</li>
+    <li>3</li>
+</ul>
+<!--<h1 style="color : red; font-size: 40px;">CSS</h1>-->
+<!--<p style="color: purple">this is a paragraph (p is block)</p>-->
+<!--<span>this is a span (span is inline block)</span>-->
+
+<button class="btn warning">warning</button>
+<button class="btn success">success</button>
+<button class="btn">normal</button>
+<button class="btn failed">failed</button>
+
+<div>
+    <p>this a p, and this is a <span>span</span></p>
+</div>
+<p>this is a another p, <strong><span>haha</span></strong></p>
+
+<span>outer span</span>
+
+
+</body>
+</html>
